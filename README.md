@@ -1,7 +1,7 @@
 # Downloads_organizer
 The tool mainly made to organise your Downloads folder, you can change it to other folder if you want,
 
-it will check if these folders if exists:
+it will check if these folders exists:
 - Compressed
 - Documents
 - Music
