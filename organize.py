@@ -1,6 +1,6 @@
 '''Downloads Organizer
 this script searches your downloads folder
-and then organises them into categorised subfolders
+and then organises your files into categorised subfolders
 '''
 import os
 from pathlib import Path
