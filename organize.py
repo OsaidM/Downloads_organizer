@@ -40,5 +40,5 @@ if __name__ == '__main__':
         name, ext = os.path.splitext(file)
         category = pick_a_category(ext)
         if category != None:
-            print(file, category)
+            print(file, '-',category)
             shutil.move(file, category)
