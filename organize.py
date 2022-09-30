@@ -18,21 +18,20 @@ def init_category_folders():
 
 def pick_a_category(ext):
     # different types of extensions for each category, might update them in future
-    doc_ext = {'.pptx', '.doc', '.docx', '.pdf', '.xlsx', '.xls', '.ppt'}
-    prog_ext = {'.exe', '.msi'}
-    arch_ext = {'.zip', '.rar', '.7z', '.tar'}
-    pics_ext = {'.gif', '.png', '.jpg', '.jpeg'}
-    mov_ext = {
-        '.mp4', '.mkv', '.mov', '.avi', '.flv',
-        '.webm', '.f4v', '.avchd', '.mpeg-2'
-        }
-    music_ext = {'.mp3', '.aac', '.ogg', '.flac', '.alac', '.wav', '.m4a', '.wma'}
-    return 'Documents' if ext in doc_ext \
-    else 'Programs' if ext in prog_ext \
-    else 'Compressed' if ext in arch_ext \
-    else 'Pictures' if ext in pics_ext \
-    else 'Music' if ext in music_ext \
-    else 'Video' if ext in mov_ext else None
+    all_ext_categories = {
+        'Documents': {'.pptx', '.doc', '.docx', '.pdf', '.xlsx', '.xls', '.ppt'},
+        'Programs': {'.exe', '.msi'},
+        'Compressed': {'.zip', '.rar', '.7z', '.tar'},
+        'Pictures': {'.gif', '.png', '.jpg', '.jpeg'},
+        'Video': {
+            '.mp4', '.mkv', '.mov', '.avi', '.flv',
+            '.webm', '.f4v', '.avchd', '.mpeg-2'
+            },
+        'Music': {'.mp3', '.aac', '.ogg', '.flac', '.alac', '.wav', '.m4a', '.wma'}
+    }
+    for key, val in all_ext_categories.items():
+        if ext in val:
+            return key
 
 if __name__ == '__main__':
     init_category_folders()
