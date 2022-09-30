@@ -11,7 +11,7 @@ it will check if these folders exists:
 
 if not it will create them for you
 
-Currently the tool can recognises these files extensions:
+Currently the tool can recognise these files extensions:
 - doc_ext = {'.pptx', '.doc', '.docx', '.pdf', '.xlsx', '.xls', '.ppt'}
 - prog_ext = {'.exe', '.msi'}
 - arch_ext = {'.zip', '.rar', '.7z', '.tar'}
