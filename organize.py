@@ -9,12 +9,12 @@ os.chdir('C:\\Users\\'+os.getlogin()+'\\Downloads')
 
 def init_category_folders():
     # if these folders not there then create them otherwise ignore
-    Path('Compressed').mkdir(exist_ok=True)
-    Path('Documents').mkdir(exist_ok=True)
-    Path('Music').mkdir(exist_ok=True)
-    Path('Pictures').mkdir(exist_ok=True)
-    Path('Programs').mkdir(exist_ok=True)
-    Path('Video').mkdir(exist_ok=True)
+    set_of_categories = {
+        'Compressed', 'Documents', 'Music',
+        'Pictures', 'Programs', 'Video'
+        }
+    for category in set_of_categories:
+        Path(category).mkdir(exist_ok=True)
 
 def pick_a_category(ext):
     # different types of extensions for each category, might update them in future
@@ -22,7 +22,10 @@ def pick_a_category(ext):
     prog_ext = {'.exe', '.msi'}
     arch_ext = {'.zip', '.rar', '.7z', '.tar'}
     pics_ext = {'.gif', '.png', '.jpg', '.jpeg'}
-    mov_ext = {'.mp4', '.mkv', '.mov', '.avi', '.flv', '.webm', '.f4v', '.avchd', '.mpeg-2'}
+    mov_ext = {
+        '.mp4', '.mkv', '.mov', '.avi', '.flv',
+        '.webm', '.f4v', '.avchd', '.mpeg-2'
+        }
     music_ext = {'.mp3', '.aac', '.ogg', '.flac', '.alac', '.wav', '.m4a', '.wma'}
     return 'Documents' if ext in doc_ext \
     else 'Programs' if ext in prog_ext \
