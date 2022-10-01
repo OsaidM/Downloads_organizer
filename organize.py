@@ -20,7 +20,7 @@ def pick_a_category(ext):
     # different types of extensions for each category, might update them in future
     all_ext_categories = {
         'Documents': {'.pptx', '.doc', '.docx', '.pdf', '.xlsx', '.xls', '.ppt'},
-        'Programs': {'.exe', '.msi', 'jar'},
+        'Programs': {'.exe', '.msi', '.jar'},
         'Compressed': {'.zip', '.rar', '.7z', '.tar'},
         'Pictures': {'.gif', '.png', '.jpg', '.jpeg'},
         'Video': {
